@@ -60,7 +60,7 @@ class BassoonSerializer {
   void _addDouble(double d) {
     builder.addByte(TypeId.doubleId);
     ByteData data = ByteData(8);
-    data.setFloat64(0, d, Endian.big);
+    data.setFloat64(0, d, Endian.little);
     builder.add(data.buffer.asUint8List());
   }
 

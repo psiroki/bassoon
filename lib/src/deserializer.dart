@@ -50,7 +50,7 @@ class BassoonDeserializer {
     Uint8List bytes = reader.readBytes(8);
     return bytes.buffer
         .asByteData(bytes.offsetInBytes, bytes.lengthInBytes)
-        .getFloat64(0, Endian.big);
+        .getFloat64(0, Endian.little);
   }
 
   String _readString() {

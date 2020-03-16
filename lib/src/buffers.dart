@@ -129,7 +129,7 @@ class BufferReader {
   int readInt64() {
     int start = _pos;
     _pos += 8;
-    return _backing.getUint64(start, Endian.big);
+    return _backing.getUint64(start, Endian.little);
   }
 
   Uint8List _range(int start, int end) =>
